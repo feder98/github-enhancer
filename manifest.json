@@ -1,0 +1,12 @@
+{
+  "name": "Github Enhancer",
+  "description": "Add functionality to Github",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["enhance.js"]
+    }
+  ]
+}
