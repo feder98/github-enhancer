@@ -1,5 +1,5 @@
 let expandGithubActionsChecks = function () {
-  let actions = document.getElementsByClassName("merge-status-list").item(0);
+  let actions = document.querySelector('[data-updatable-content-scroll-position-id="merge-status-list"]');
   actions.style.maxHeight = "1000px";
 };
 
@@ -11,8 +11,7 @@ function waitForActionsListToDisplay(
   var startTimeInMs = Date.now();
   (function loopSearch() {
     if (
-      document.getElementsByClassName("merge-status-list") != null &&
-      document.getElementsByClassName("merge-status-list").item(0) != null
+      document.querySelector('[data-updatable-content-scroll-position-id="merge-status-list"]') != null
     ) {
       callback();
       return;
